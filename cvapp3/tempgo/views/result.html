@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解析内容</title>
+    <link rel="stylesheet" href="/static/css/styler.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            {{.ContentForTemplate | safeHTML}}
+        </div>
+    </div>
+</body>
+</html>

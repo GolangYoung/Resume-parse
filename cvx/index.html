@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>简历解析</title>
+</head>
+<body>
+    <div id="app">
+        <div id="file-upload-form">
+            <h1>请上传你的pdf简历</h1>
+            <input type="file" id="resume-file" accept=".pdf" />
+            <button onclick="handleUpload()">Upload</button>
+            <p id="upload-status" style="display: none;">解析中...</p> <!-- 提示信息 -->
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function handleUpload() {
+            const fileInput = document.getElementById('resume-file');
+            const file = fileInput.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+
+            // 显示解析中提示
+            document.getElementById('upload-status').style.display = 'block';
+
+            fetch('/api/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // 隐藏解析中提示
+                document.getElementById('upload-status').style.display = 'none';
+
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    displayAsTable(data.resume); // 假设返回的数据是简历内容
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('upload-status').style.display = 'none'; // 隐藏解析中提示
+                alert('An error occurred during the upload.');
+            });
+        }
+
+        // 将解析后的数据以表格形式展示
+        function displayAsTable(resumeData) {
+            const resultDiv = document.getElementById('result');
+            const table = document.createElement('table');
+        
+            // 按行分割数据
+            const rows = resumeData.split('<br>');
+        
+            rows.forEach((row, rowIndex) => {
+                if (row.trim() === '') return; // 跳过空行
+        
+                const tr = document.createElement('tr');
+                const td = document.createElement('td');
+                td.textContent = row.trim();
+                tr.appendChild(td);
+                table.appendChild(tr);
+            });
+        
+            resultDiv.innerHTML = ''; // 清空之前的结果
+            resultDiv.appendChild(table); // 显示新表格
+        }
+    </script>
+</body>
+</html>

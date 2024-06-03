@@ -1,0 +1,66 @@
+/* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fdeef5; /* 粉绿色背景 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 使用视口高度来居中内容 */
+}
+
+/* 内容容器样式 */
+.content-container {
+    background-color: #fff; /* 白色背景 */
+    width: 300px; /* 固定宽度 */
+    height: 300px; /* 固定高度 */
+    padding: 20px;
+    border-radius: 8px; /* 圆角边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中容器内的内容 */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #5a1f4d; /* 深粉色标题 */
+}
+
+/* 表单样式 */
+form {
+    margin-top: 20px;
+    width: 100%; /* 表单宽度占满容器 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 文件输入样式 */
+input[type="file"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: calc(100% - 22px); /* 减去padding的宽度 */
+    border: 2px solid #b28774; /* 粉绿色边框 */
+    border-radius: 4px; /* 圆角边框 */
+    background-color: #fdeef5; /* 粉绿色背景 */
+    color: #5a1f4d; /* 深粉色字体 */
+}
+
+/* 上传按钮样式 */
+button {
+    padding: 10px 20px;
+    margin: 4px;
+    border-radius: 4px; /* 圆角边框 */
+    background-color: #b28774; /* 粉绿色背景 */
+    color: white;
+    border: 2px solid #8a2b67; /* 深粉色边框 */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #8a2b67; /* 鼠标悬浮时更深的粉色 */
+}

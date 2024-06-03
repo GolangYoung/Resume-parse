@@ -1,0 +1,60 @@
+/* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4eef6; /* 粉绿色背景 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 使用视口高度来居中内容 */
+}
+
+/* 内容容器样式 */
+.content-container {
+    background-color: #ffffff; /* 白色背景 */
+    width: 50%; /* 宽度调整为视口宽度的50%，更窄 */
+    max-width: 700px; /* 为内容容器设置一个最大宽度限制 */
+    padding: 20px;
+    border-radius: 8px; /* 圆角边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 内容容器阴影 */
+    text-align: center;
+    overflow-y: auto; /* 允许垂直滚动 */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #8a2b67; /* 深粉色标题 */
+}
+
+/* 简历解析内容样式 */
+.content-container div {
+    border: 1px solid #b28774; /* 粉绿色边框 */
+    border-radius: 4px; /* 圆角边框 */
+    background-color: #fdeef5; /* 浅粉绿色背景 */
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left; /* 内容左对齐 */
+    word-wrap: break-word; /* 长单词换行 */
+    color: #5a1f4d; /* 深粉色文字 */
+    max-height: calc(60vh - 40px); /* 减去顶部和底部的padding */
+    overflow-y: auto; /* 允许垂直滚动 */
+}
+
+/* 返回按钮样式 */
+.content-container a button {
+    display: inline-block; /* 按钮内联显示 */
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #b28774; /* 粉绿色背景 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center; /* 按钮文本居中 */
+    margin-bottom: 20px;
+}
+
+.content-container a button:hover {
+    background-color: #8a2b67; /* 鼠标悬浮时更深的粉色 */
+}

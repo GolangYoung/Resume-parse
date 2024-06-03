@@ -1,0 +1,45 @@
+/* 重置一些基本元素的样式 */
+body, h1, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif; /* 设置默认字体 */
+  background-color: #f9f9f9; /* 页面背景颜色 */
+  text-align: center; /* 页面文本居中 */
+  padding: 20px; /* 页内边距 */
+  display: flex; /* 使用Flexbox居中内容 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  min-height: 100vh; /* 至少为视口高度 */
+}
+
+h1 {
+  color: #333; /* 标题颜色 */
+}
+
+/* 导航栏样式 */
+nav {
+  background-color: #d3e7f4; /* 浅蓝色背景 */
+  padding: 10px 0; /* 导航栏内边距 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 轻微的阴影效果 */
+}
+
+.content-container {
+  background-color: #d3e7f4; /* 浅蓝色背景 */
+  padding: 20px; /* 内容内边距 */
+  border-radius: 8px; /* 边框圆角 */
+  max-width: 800px; /* 最大宽度 */
+  width: 60%; /* 宽度 */
+  margin: 0 auto; /* 上下为0，左右自动（居中） */
+  text-align: left; /* 文字靠左对齐 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 内容阴影 */
+}
+
+/* 如果需要，更新 h1 标题样式以确保与背景色形成对比 */
+h1 {
+  text-align: center;
+  color: #333; /* 标题颜色 */
+  margin-bottom: 20px; /* 标题与内容之间的间距 */
+}

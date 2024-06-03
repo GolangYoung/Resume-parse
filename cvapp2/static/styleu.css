@@ -1,0 +1,93 @@
+/* styleu.css */
+
+/* 整体样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef; /* 更柔和的背景色 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* 导航栏样式 */
+.navbar {
+    text-align: center;
+    background-color: #286ea7; /* 蓝色背景 */
+    overflow: hidden;
+    position: fixed; /* 固定在页面顶部 */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 确保导航栏在其他内容之上 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #286ea7; /* 更深的蓝色悬停效果 */
+}
+
+/* 内容容器 */
+.content-container {
+    max-width: 1000px; /* 增加内容容器的宽度 */
+    margin: 120px auto 40px auto; /* 增加顶部边距以避免导航栏遮挡内容 */
+    background-color: #ffffff;
+    padding: 40px; /* 增加填充 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* 标题样式 */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em; /* 增加标题字体大小 */
+}
+
+/* 解析结果样式 */
+.content-container div {
+    font-size: 18px; /* 增加字体大小 */
+    line-height: 1.6; /* 增加行高 */
+    color: #555;
+    text-align: left; /* 如果需要左对齐文本内容，可以使用这个样式 */
+}
+
+/* 高亮关键词样式 */
+.highlighted {
+    background-color: #fff3cd; /* 柔和的黄色背景 */
+    font-weight: bold;
+}
+
+/* 按钮样式 */
+button {
+    background-color: #286ea7; /* 绿色背景 */
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #214388; /* 更深的绿色悬停效果 */
+}
+
+

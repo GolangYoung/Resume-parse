@@ -1,0 +1,48 @@
+/* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* 浅灰色背景 */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 头部样式 */
+.site-header {
+    background-color: #d7b9f2; /* 浅紫色背景 */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.site-header h1 {
+    margin: 0;
+    color: #fff; /* 文字颜色 */
+}
+
+/* 主要内容区域 */
+.content {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 页脚样式 */
+.site-footer {
+    background-color: #d7b9f2; /* 浅紫色背景 */
+    text-align: center;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+        margin: 30px auto;
+    }
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Result</title>
+    <link rel="stylesheet" href="/static/styleu.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/upload">简历解析系统</a>
+    </div>
+    <div class="content-container">
+        <h1>解析结果</h1>
+        <div>{{ .resume.Content }}</div>
+        <a href="/upload">
+            <button type="button">上传其他的 PDF</button>
+        </a>
+    </div>
+</body>
+</html>

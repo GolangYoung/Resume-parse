@@ -1,0 +1,91 @@
+/* style.css */
+
+/* 整体样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #4CAF50; /* 绿色背景 */
+    overflow: hidden;
+    position: fixed; /* 固定在页面顶部 */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 确保导航栏在其他内容之上 */
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #3e8e41;
+}
+
+/* 容器样式 */
+.container {
+    max-width: 500px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* 标题样式 */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 表单样式 */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 表单元素样式 */
+label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #94ea98;
+}
+
+

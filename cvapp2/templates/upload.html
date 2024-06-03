@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简历解析系统</title>
+    <link rel="stylesheet" href="/static/styleu.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/upload">简历解析系统</a>
+    </div>
+    <div class="content-container">
+        <h1>上传你的PDF简历</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <button type="submit" >上传</button>
+        </form>
+    </div>
+</body>
+</html>

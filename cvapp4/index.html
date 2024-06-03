@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简历上传与解析结果</title>
+    <!-- 引入Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>上传简历文件</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="resumeFile">选择PDF文件</label>
+                <input type="file" class="form-control" id="resumeFile" name="file" accept=".pdf" required>
+            </div>
+            <button type="button" id="uploadBtn" class="btn btn-primary">上传文件</button>
+        </form>
+
+        <h2 class="mt-4">简历解析结果</h2>
+        <div id="result" class="border p-3 mt-3"></div>
+    </div>
+
+    <!-- 引入Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // 处理文件上传
+        document.getElementById('uploadBtn').addEventListener('click', function() {
+            var fileInput = document.getElementById('resumeFile');
+            if (fileInput.files.length === 0) {
+                alert('请先选择一个文件。');
+                return;
+            }
+
+            var formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.ok ? response.text() : Promise.reject(response))
+            .then(data => {
+                // 假设后端返回的是HTML格式的简历内容
+                document.getElementById('result').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('上传失败，请重试。');
+            });
+        });
+    </script>
+</body>
+</html>

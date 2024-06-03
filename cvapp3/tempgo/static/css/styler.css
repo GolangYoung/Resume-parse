@@ -1,0 +1,42 @@
+/* styles.css */
+
+body {
+    background-color: #fff; /* 白色背景 */
+    font-family: Arial, sans-serif; /* 使用Arial字体 */
+    margin: 0; /* 去除页面默认的外边距 */
+    padding: 0; /* 去除页面默认的内边距 */
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    min-height: 100vh; /* 至少占据视口的全部高度 */
+    flex-direction: column; /* 设置flex方向为列 */
+    text-align: left; 
+}
+
+.container {
+    width: 80%; /* 调整内容容器宽度为页面宽度的80% */
+    max-width: 800px; /* 内容容器最大宽度调整为800px */
+    margin: auto; /* 自动居中 */
+}
+
+.content {
+    background-color: #f2e6ff; /* 浅紫色背景 */
+    border: 2px solid #d67eff; /* 紫色边框 */
+    padding: 30px; /* 增加内边距 */
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 轻微的阴影效果 */
+    margin-bottom: 30px; /* 增加与底部的距离 */
+    color: #333; /* 文字颜色 */
+    line-height: 1.6; /* 行高 */
+}
+
+/* 如果需要适配小屏幕设备，可以添加媒体查询 */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* 在小屏幕上进一步增加宽度 */
+    }
+
+    .content {
+        padding: 20px; /* 在小屏幕上调整内边距 */
+    }
+}

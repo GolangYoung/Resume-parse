@@ -1,0 +1,113 @@
+/* 全局样式 */
+body {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 上传表单样式 */
+#file-upload-form {
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    flex-direction: column; /* 子元素垂直排列 */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#file-upload-form h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.5rem;
+    justify-content: center; /* 水平居中 */
+}
+
+input[type="file"] {
+    display: none; /* 隐藏文件输入元素 */
+}
+
+button {
+    background-color: #6a82fb;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5e72f3;
+}
+
+/* 结果展示区域样式 */
+#result {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* 表格样式 */
+#result table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    text-align: left;
+}
+
+#result th,
+#result td {
+    border: none;
+    padding: 15px;
+}
+
+#result th {
+    background-color: #6a82fb;
+    color: white;
+}
+
+#result td {
+    background-color: #eef2ff;
+    font-weight: 300;
+}
+
+#result tr:nth-child(even) td {
+    background-color: #fff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #file-upload-form, #result {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 95%;
+    }
+
+    #file-upload-form h1 {
+        font-size: 2rem;
+    }
+}
+
+/* 文件输入框样式 */
+input[type="file"] {
+    display: block; /* 改为块级元素 */
+    margin-bottom: 10px; /* 根据需要添加外边距 */
+    padding: 10px; /* 根据需要添加内边距 */
+    border: 1px solid #ddd; /* 添加边框 */
+    border-radius: 5px; /* 边框圆角 */
+}
